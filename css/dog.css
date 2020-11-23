@@ -1,0 +1,299 @@
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/******* navbar******/
+header {
+    font-size: 20px;
+    background-image: url("../images/BackGround/bg4.jpg");
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+
+
+header ul {
+    list-style: none;
+}
+
+header #menue a {
+    color: white;
+}
+
+header #menue a:hover {
+    text-decoration: none;
+}
+
+#toggle {
+    display: none;
+    cursor: pointer;
+}
+
+header .title {
+    margin-left: 30%;
+    margin-top: 40vh;
+}
+
+/*******navbar **************/
+
+
+@media(min-width:1000px) {
+
+
+
+    #menue {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #2A5D82;
+
+    }
+
+    .item:hover li {
+        color: #70C9F5;
+
+
+    }
+
+    .active:hover li {
+        color: white;
+    }
+
+    .active {
+        background-color: #70C9F5;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+
+    }
+
+}
+
+@media(max-width:1000px) {
+    #menue {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #2A5D82;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        padding: 0px;
+    }
+
+    .active:hover li {
+        color: white;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .item {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .active {
+        background-color: #70C9F5;
+
+    }
+
+
+    #toggle {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .button {
+        order: 2;
+    }
+}
+
+.item:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+
+/**************Main****************/
+main {
+    margin-bottom: 70px;
+}
+
+.side2 {
+    margin-top: 50px;
+
+}
+
+
+.social:hover {
+    transform: scale(1.3, 1.3);
+}
+
+.bigtitle {
+    text-decoration: underline;
+}
+
+/*navbar2*/
+.items a {
+    color: white;
+}
+
+.items .active2 {
+    color: #70C9F5;
+
+}
+
+.items .pet:hover {
+    color: #70C9F5;
+
+}
+
+.items a:hover {
+    text-decoration: none;
+}
+
+.side1 nav {
+    color: white;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+main nav ul {
+    list-style: none;
+}
+
+main nav ul .b,
+main nav ul .storetoggle {
+    background-color: #2A5D82;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    cursor: pointer;
+
+}
+
+.b2 {
+    background-color: #2A5D82;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+main nav .dropdown li:hover {
+    background-color: #70C9F5;
+
+}
+
+main nav .dropdown li {
+    padding: 20px;
+    padding-right: 40px;
+}
+
+
+.animal {
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    margin-top: 20px;
+
+}
+
+.items {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+#storetoggle {
+    display: none;
+}
+
+
+
+.items {
+    height: 100px;
+
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #2A5D82;
+}
+
+
+
+#searchbar {
+    border-radius: 4px;
+    width: 400px;
+    height: 40px;
+}
+
+@media(max-width:1200px) {
+    .side1 {
+        width: 100vw;
+        top: 0;
+        position: sticky;
+        z-index: 1000;
+        padding-bottom: 0px;
+    }
+
+    .all {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .items {
+        width: 100vw;
+    }
+
+    #storetoggle {
+        display: block;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .b,
+    .b2 {
+        display: none;
+    }
+
+    .search {
+        margin-left: 40px;
+        background-color: #2A5D82;
+    }
+
+
+}
+
+
+
+
+/*************footer************/
+footer {
+    background-color: #2A5D82;
+    color: white;
+    width: 100vw;
+    height: 30vh;
+}
+
+footer .row {
+    padding-top: 70px;
+}

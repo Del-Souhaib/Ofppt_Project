@@ -1,0 +1,397 @@
+<?php
+session_start();
+
+?>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\index.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <nav class="sticky-top mb-0">
+
+            <ul id="menue" class="sticky-top mb-0">
+                <li class="logo"> <a href="index.html"><img src="images\logo.svg" alt="" id="imglogo" height="60px"></a>
+                </li>
+                <li class="toggle d-flex align-items-center"> <img src="images/Icons/toggle.png" id="toggle" alt="" width="40" height="40">
+                </li>
+                <a class="item active" href="../index.php">
+                    <li>Home </li>
+                </a>
+                <a class="item " href="pages\aboutus.php">
+                    <li>Our story</li>
+                </a>
+                <a class="item" href="pages\services.php">
+                    <li>Our services</li>
+                </a>
+                <a class="item" href="pages\store.php">
+                    <li>Store</li>
+                </a>
+                <a class="item" href="pages\community.php">
+                    <li> Community</li>
+                </a>
+                <a class="item" href="pages\contact.php">
+                    <li>Contact</li>
+                </a>
+                <?php
+if (isset($_SESSION['id'])) {
+    echo '
+    <a class="item" href="pages\mycarts.php">
+    <img src="images\Icons\Carts.png" width="50" height="50">
+</a>
+';
+} else {
+    echo '
+               <li class="item button">
+                    <a href="pages\Login.php">
+                        <button type="submit" class="btn btn-primary">Join us</button>
+                    </a>
+                </li>';
+}
+
+?>
+
+            </ul>
+        </nav>
+        <div id="carouselExampleCaptions" class="carousel slide mt-0" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images\BackGround\bg1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images\BackGround\bg2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images\BackGround\bg3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid ">
+            <div class="block1">
+                <div class="main-title">
+                    <h2 class="bigtitle">Advices to keep your pets safe</h2>
+                </div>
+                <div class="boxs">
+
+                    <div class="  box1 box">
+                        <div class="advicees_image">
+                            <img src="images\index\dog.png" alt="">
+                        </div>
+                        <p>We all want our pups to live a long, happy, healthy life and there are things every dog
+                            parent
+                            can do to help make that happen. Here are 10 tips to help any dog feel happier and
+                            healthier.
+                        </p><bR><br>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box2 box">
+                        <div class="advicees_image">
+                            <img src="images\index\cat.png" width="100" height="100" alt="">
+                        </div>
+                        <p>Having a cat can mean different things to different people. Some want a cat to cuddle and sit
+                            on
+                            their laps; others are happy to live with a very independent cat which spends most of its
+                            time
+                            outside and doesn’t want too much human interaction.
+                        </p>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box3 box">
+                        <div class="advicees_image">
+                            <img src="images\index\bird.png" alt="">
+                        </div>
+                        <p>Having a bird as a pet means enjoying one more member at home. There are many benefits to
+                            having
+                            a bird at your side, but it also requires some sacrifice. A pet is not a toy. It requires
+                            care,
+                            care, and even having permits in order in some cases.
+                        </p>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box4 box">
+                        <div class="advicees_image">
+                            <img src="images\index\fish.png" alt="">
+                        </div>
+                        <p>Different types of aquatic life will require different water conditions, but for any
+                            underwater
+                            creature, a proper environment is critical. A few factors to consider include:</p>
+                        <br><bR><br>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box5 box">
+                        <div class="advicees_image">
+                            <img src="images\index\hamster.png" alt="">
+                        </div>
+                        <p>Four paws, two bright eyes, and a set of twitchy whiskers. There’s nothing cuter than a pet
+                            hamster! If you’ve recently welcomed a hamster into your family, here are nine quick care
+                            tips to memorize.</p><br><br><br><br>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box6 box">
+                        <div class="advicees_image">
+                            <img src="images\index\hors.png" alt="">
+                        </div>
+                        <p>Horse rescues can be great place for you to find a special equine partner. Plus, you’ll be
+                            giving your adopted horse a second chance at life.Well-run rescues will want to send an
+                            agent to visit the location you plan to keep your horse to verify that you have a safe,
+                            suitable facility.</p><br>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box7 box">
+                        <div class="advicees_image">
+                            <img src="images\index\turtle.png" height="100" width="100" alt="">
+                        </div>
+                        <p>Turtles are fascinating to watch, and many have attractive colors and markings, and
+                            interesting personalities. They can make great interactive pets. They are known for
+                            recognizing their owners and endlessly begging for food. It’s all part of their charm.</p>
+                        <bR><br>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                    <div class=" box8 box">
+                        <div class="advicees_image">
+                            <img src="images\index\lizard.png" alt="">
+                        </div>
+                        <p>Some reptiles are very tolerant of handling, and others should not be handled unless it’s
+                            necessary for husbandry or health. These concerns should be addressed before a rhythmic
+                            pattern of interaction can be established. Keep the three Cs in mind when dealing with any
+                            reptile: cool, calm and collected. </p>
+                        <a href="pages/services.php">Learn more</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid block2">
+
+            <div class="row ">
+                <div class="col-12">
+                    <h2 class="bigtitle">Why you should choose us</h2>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 srv">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>- Our product</h3>
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="images\index\pic2.png" alt="">
+                        </div>
+                        <div class="col-sm-10">
+                            <p>Our product is the best on the market :
+                                <ul>
+                                    <li>Our animals food is full healthy for animals.</li>
+                                    <li>Animal clothes made by high quality .</li>
+                                    <li>We have the best veterinarians .</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 srv">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>- Our Stores</h3>
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="images\index\pic1.png" alt="">
+                        </div>
+                        <div class="col-sm-10">
+                            <p>Our stores special because of :
+                                <ul>
+                                    <li>We have on every city of morocco a store and soon algeria.</li>
+                                    <li>Our online store : You can buy from our onlien sotrea and you will receive you
+                                        order so
+                                        fast.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-6 srv">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>- Our Insurance</h3>
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="images\index\pic3.png" alt="">
+                        </div>
+                        <div class="col-sm-10">
+                            <p>Our Insurance have so many benefits :
+                                <ul>
+                                    <li>You pay only 90% of your pet medical operation .</li>
+                                    <li>We keep your pet in save:if your pet stuck on danger place you can call us and
+                                        our team
+                                        will came fast as possible to save you pet</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 srv">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>- Our community</h3>
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="images\index\pic4.png" alt="">
+                        </div>
+                        <div class="col-sm-10">
+                            <p>Our website give you so many benifits:
+                                <ul>
+                                    <li>Share your picutres and stories with others</li>
+                                    <li>Asking us by send messsage</li>
+                                    <li>Declare if there is animal in danger .</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid block3">
+            <div class="row ">
+                <h2 class="bigtitle">Our clients feedbacks</h2>
+
+                <div class="row card-deck">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="card">
+                            <img src="images\index\human1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sarra Madani</h5>
+                                <p class="card-text">In the first i was not like or love animals i was scared of them
+                                    even i
+                                    cant touch them , but when i visit you community and i saw stories and pictures of
+                                    peoples i saw the beuatiful side of having an animal, after one month i decide to
+                                    adoption an pet i came to you and i chose a cat and i'm living with it now and i
+                                    love it it so much she make me so happy all what i can say is thanx you so much</p>
+                                <p class="card-text"><small class="text-muted">Last updated 2 weeks ago</small></p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+
+                        <div class="card ">
+                            <img src="images\index\human2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Ahmed Moutawakil</h5>
+                                <p class="card-text">This organisation saved my cat when she was in danger they came so
+                                    fast
+                                    to my house and they get down my cat from the tree without getting my cat hurt. all
+                                    what
+                                    i want say is thank you so much for your efforts and for what do are you doing for
+                                    animals</p>
+                                <p class="card-text"><small class="text-muted">Last updated 5 months ago</small></p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+
+                        <div class="card ">
+                            <img src="images\index\human3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Nouhaila Ora</h5>
+                                <p class="card-text">I love your services specialy your community because of it i met
+                                    new
+                                    friends who loves animals and i share my stories my pictures with others and i'm
+                                    really
+                                    love your advices that you gave it to me , and answering my question.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 1 month ago</small></p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class=" col-md-4">
+                    <p class="tmplt">This Template made by Souhaib & Radouan</p>
+
+                </div>
+                <div class="col-md-8">
+                    Follow us :
+                    <a href="https://www.facebook.com/Del.Souhaib"><img src="images/Social media/facebook.png" class="social" width="50px" height="50px"
+                            alt=""></a>
+                    <a href="https://www.linkedin.com/in/souhaib-allout/"><img src="images/Social media/linkedin.png" class="social" class="social" width="50px"
+                            height="50px" alt=""></a>
+                    <a href=""> <img src="images/Social media/google.png" class="social" width="50px" height="50px"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="javascript\jquery.js"></script>
+
+    <script src="javascript\index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</body>
+
+</html>
